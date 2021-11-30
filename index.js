@@ -8,7 +8,7 @@ var app = express();
 app.use(express.json());
 //Return Home Page
 app.get('/', function (req, res) {
-    res.status(200).sendFile(path.join(__dirname + "/src/pages/home.html"));
+    res.status(200).sendFile(path.join("".concat(__dirname, "/src/pages/home.html")));
 });
 //Get all food
 app.get('/food', function (req, res) {
@@ -36,7 +36,7 @@ app.post('/add/food', function (req, res) {
         }
         else {
             res.status(200).send({
-                message: "Successfully added " + (newFood_1 === null || newFood_1 === void 0 ? void 0 : newFood_1.name.toLocaleUpperCase()),
+                message: "Successfully added ".concat(newFood_1 === null || newFood_1 === void 0 ? void 0 : newFood_1.name.toLocaleUpperCase()),
             });
         }
     }
